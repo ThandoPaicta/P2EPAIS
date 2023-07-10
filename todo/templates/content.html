@@ -1,0 +1,18 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Content Page</title>
+</head>
+<body>
+    <h1>Generated Content</h1>
+    <ul>
+        {% for content in generated_content %}
+            <li>{{ content }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+<a class="navbar-brand" href="{% url 'home' %}"> Home</a>

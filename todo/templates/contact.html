@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-pzjw8CYn6+jvqyt4HJ1+t6Ud5IFT+TxK16+9p6kZ2jcqELwCy9aV/Di5zvb34TFE"
+          crossorigin="anonymous">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or feedback, please don't hesitate to reach out to us. We're here to assist you!</p>
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"
+            integrity="sha384-7wTrRqxwFVsxhNTj8FYX9n99bB8cySyQhTjFtlE+8Pn9TmgY3fw1yjX5sEuEghHJ"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-O6IQMF8prlLhky0e4O4FJ8gPQyYb6jWi+leFtkw20FgPrHPwiCG5sfEhbbX6BXqV"
+            crossorigin="anonymous"></script>
+{% endblock %}

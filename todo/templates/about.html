@@ -1,0 +1,83 @@
+
+
+
+
+{% block content %}
+    <h1>About P2EPAIS</h1>
+    <p>P2EPAIS is an innovative online learning platform that leverages artificial intelligence (AI) technology to provide an interactive and personalized learning experience for students.</p>
+
+    <h2>Our Mission</h2>
+    <p>Our mission is to revolutionize the way students learn math and STEM subjects by offering advanced AI-powered features and tools that enhance their learning journey.</p>
+
+    <h2>AI Features</h2>
+    <p> P2EPAIS offers a range of cutting-edge AI features to assist students in their learning process:</p>
+    <ul>
+        <li>
+            <strong>Content Generation:</strong> Our AI algorithms generate interactive and engaging learning content tailored to each student's needs and learning style.
+        </li>
+        <li>
+            <strong>Personalized Learning:</strong> The platform adapts to individual students, providing personalized recommendations, exercises, and challenges to optimize their learning outcomes.
+        </li>
+        <li>
+            <strong>Exam Assistance:</strong> We offer exam preparation assistance through AI-powered tools that provide practice questions, mock exams, and performance analytics to help students excel in their assessments.
+        </li>
+        <li>
+            <strong>Learning Analytics:</strong> Our system tracks student progress and provides detailed analytics to students, parents, and educators, allowing them to monitor performance and identify areas for improvement.
+        </li>
+    </ul>
+
+    <h2>Text-to-Speech</h2>
+    <p>P2EPAIS incorporates a powerful text-to-speech feature to support learners in their exam preparation:</p>
+    <p>Students can enter text into the provided text input, and the system will convert the text into speech, allowing students to listen to the content. This feature helps improve comprehension, pronunciation, and auditory learning.</p>
+
+    <h2>Professional and Reliable</h2>
+    <p>P2EPAIS is designed and maintained by a team of experienced educators and AI experts. We are dedicated to providing a professional and reliable learning platform that meets the highest standards of quality and security.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have any questions or feedback, please don't hesitate to contact us. We're here to assist you on your learning journey!</p>
+    <p>Email: info@p2epais.com</p>
+{% endblock %}
+
+{% block css %}
+<style>
+    /* Add custom CSS styles here */
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    h1 {
+        color: #333;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    h2 {
+        color: #333;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    
+    strong {
+        font-weight: bold;
+    }
+</style>
+{% endblock %}
+
+<a class="navbar-brand" href="{% url 'home' %}"> Home</a>

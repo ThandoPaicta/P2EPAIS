@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{load static}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activate Your Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        p {
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Activate Your Account</h1>
+        <p>Hi {{ user.username }},</p>
+        <p>Thank you for registering with P2EPAIS. Please click the link below to activate your account:</p>
+        <p>Click the following link to activate your account:</p>
+        <a href="{{ activation_url }}">Activate Account</a>
+        
+        <p>If you didn't register on our website, please ignore this email.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{load static}
+
+<!-- exam_assistance.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exam Assistance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .exam-info {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .exam-info h2 {
+            color: #333;
+            margin: 0;
+        }
+        .exam-info p {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .exam-tips {
+            margin-top: 30px;
+        }
+        .exam-tips h3 {
+            color: #333;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        .exam-tips ul {
+            padding-left: 20px;
+        }
+        .exam-tips li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exam Assistance</h1>
+
+    <!-- Display the fetched exams -->
+    <div class="exam-info">
+        <h2>Exams:</h2>
+        <ul>
+            {% for exam in exams %}
+                <li>Title: {{ exam.title }}</li>
+                <li>Lesson: {{ exam.lesson }}</li>
+                <!-- Add more exam details here as needed -->
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Additional information and exam tips -->
+    <div class="exam-tips">
+        <h3>Exam Tips:</h3>
+        <ul>
+            <li>Tip 1: Practice regularly and review your notes.</li>
+            <li>Tip 2: Manage your time effectively during the exam.</li>
+            <li>Tip 3: Stay calm and focused during the exam.</li>
+            <!-- Add more exam tips here -->
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning Analytics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #666;
+        }
+
+        p {
+            color: #999;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Learning Analytics</h1>
+    <h2>Welcome, {{ analytics.user.username }}</h2>
+    <p>Progress: {{ analytics.progress }}%</p>
+    <p>Achievements: {{ analytics.achievements }}</p>
+    <p>Exams Taken: {{ analytics.exams_taken }}</p>
+    <p>Progress Percentage: {{ progress_percentage }}%</p>
+</body>
+</html>

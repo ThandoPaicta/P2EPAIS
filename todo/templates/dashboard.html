@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <h1>Welcome to  P2EPAIS</h1>
+    <p>Explore the world of math and STEM subjects with our interactive learning platform.</p>
+
+    <div class="dashboard">
+        <h2>User Dashboard</h2>
+        <div id="dashboard-table"></div>
+    </div>
+
+    <div class="chat">
+        <h2>Chat</h2>
+        <!-- Your chat component goes here -->
+    </div>
+
+    <div class="email">
+        <h2>Email</h2>
+        <!-- Your email component goes here -->
+    </div>
+
+    <div class="report">
+        <h2>Report</h2>
+        <!-- Your report component goes here -->
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            
+            <div class="footer-info">
+                <p> P2EPAIS &copy; 2023. All rights reserved.</p>
+                <p>Address: 123 Main Street, City, Country</p>
+                <p>Email: info@p2epais.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Example data for the dashboard table
+            var data = [
+                { id: 1, name: 'John Doe', email: 'john@example.com' },
+                { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
+                { id: 3, name: 'Tom Brown', email: 'tom@example.com' }
+            ];
+
+            // Generate the table structure dynamically
+            var tableHtml = '<table class="table"><thead><tr><th>ID</th><th>Name</th><th>Email</th></tr></thead><tbody>';
+            $.each(data, function(index, item) {
+                tableHtml += '<tr><td>' + item.id + '</td><td>' + item.name + '</td><td>' + item.email + '</td></tr>';
+            });
+            tableHtml += '</tbody></table>';
+
+            // Append the table to the dashboard
+            $('#dashboard-table').html(tableHtml);
+        });
+    </script>
+{% endblock %}

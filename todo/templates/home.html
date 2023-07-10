@@ -1,0 +1,87 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to  P2EPAIS</h1>
+    <p>Explore the world of math and STEM subjects with our interactive learning platform.</p>
+    <p>Not registered? <a href="{% url 'registration' %}">Sign up here</a>.</p>
+
+    <p>Already have an account? <a href="{% url 'login' %}">Login here</a>.</p>
+
+    <div class="ai-features">
+  <h2>AI Features</h2>
+  <div class="card">
+    <img src="{% static 'images/content_generation.jpeg' %}" alt="Content Generation">
+    <div class="card-content">
+      <h3>Content Generation</h3>
+      <p>Automatically generate educational content using AI algorithms and natural language processing (NLP). Enhance the learning experience by dynamically creating relevant study materials based on user needs and preferences.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{% static 'images/personalized_learning.png' %}" alt="Personalized Learning">
+    <div class="card-content">
+      <h3>Personalized Learning</h3>
+      <p>Deliver personalized learning experiences tailored to individual students. Utilize AI techniques to analyze user data, identify strengths and weaknesses, and provide customized learning paths, adaptive exercises, and targeted recommendations.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{% static 'images/exam_assistance.png' %}" alt="Exam Assistance">
+    <div class="card-content">
+      <h3>Exam Assistance</h3>
+      <p>Support students in exam preparation through AI-powered assistance. Offer practice exams, intelligent feedback on answers, and targeted study material recommendations to optimize exam performance and boost confidence.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{% static 'images/learning_analytics.png' %}" alt="Learning Analytics">
+    <div class="card-content">
+      <h3>Learning Analytics</h3>
+      <p>Leverage learning analytics to gain insights into student progress, engagement, and performance. Monitor learning patterns, identify areas for improvement, and provide data-driven interventions for enhanced learning outcomes.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+    <div class="text-to-speech">
+        <h2>Text-to-Speech</h2>
+        <p>Listen to the text:</p>
+        <textarea id="text-input" rows="4" cols="50" placeholder="Enter text"></textarea>
+        <button id="speech-button">Speak</button>
+    </div>
+
+    <footer>
+  <div class="footer-content">
+    <div class="footer-info">
+      <p>P2EPAIS &copy; 2023. All rights reserved.</p>
+      <p>Address: 123 Main Street, City, Country</p>
+      <p>Email: info@p2epais.com</p>
+    </div>
+    <div class="social-icons">
+      <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
+      <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
+      <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#speech-button').on('click', function() {
+                var text = $('#text-input').val();
+                if (text.trim() !== '') {
+                    var speechUrl = 'https://translate.google.com/translate_tts?ie=UTF-8&q=' + encodeURIComponent(text) + '&tl=en&client=tw-ob';
+                    var audio = new Audio(speechUrl);
+                    audio.play();
+                }
+            });
+        });
+    </script>
+{% endblock %}
